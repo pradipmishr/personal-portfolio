@@ -1,0 +1,36 @@
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide normal nav on small screens */
+    }
+  
+    .hamburger-menu {
+      display: flex; /* Show hamburger on small screens */
+    }
+    
+    /* Show mobile menu when hamburger is clicked */
+    .mobile-nav.active {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 15px 20px;
+    }
+  
+    .logo {
+      flex-shrink: 0;
+    }
+  
+    .logo-img {
+      height: 30px;
+    }
+  
+    .portfolio-text {
+      font-size: 20px;
+    }
+  }
+  
