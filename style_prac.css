@@ -1,8 +1,8 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
+
   html {
     scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
 }
 
 
@@ -132,7 +132,7 @@ body {
     margin: 10px 0;
   }
   
-  .hero-section h2 {
+  .hero-section h2,p {
     font-size: 1.8rem;
     color: #555;
     margin-bottom: 30px;
@@ -154,14 +154,9 @@ body {
     border-radius: 6px;
     text-decoration: none;
   }
-  
-  .btn-filled {
-    padding: 12px 25px;
-    background: #333;
+  .btn-outline:hover{
     color: white;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
+    background-color: #000;
   }
   
   .social-icons {
@@ -170,6 +165,349 @@ body {
     gap: 20px;
     font-size: 24px;
   }
+  .about-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Optional: white background */
+    padding: 0 2rem;
+    text-align: center;
+  }
   
+  .about-container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .about-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-description {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #333;
+  }
+  .skills-section {
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+  
+  .skills-header .skills-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .skills-header .skills-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+  
+  .skills-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .skills-group {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .skills-group h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  
+  .skills-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .skill-card {
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skill-card img {
+    max-width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-card button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: default;
+  }
+  .education-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .timeline {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-left: 3px solid #007bff;
+    padding-left: 30px;
+  }
+  
+  .edu-card {
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  
+    /* Add animation styles */
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .edu-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.2);
+  }
+  
+  
+  .edu-icon {
+    background: #f0f4ff;
+    border-radius: 50%;
+    padding: 10px;
+    flex-shrink: 0;
+  }
+  
+  .edu-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .edu-content {
+    text-align: left;
+  }
+  
+  .edu-content h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .edu-content p {
+    margin: 6px 0;
+    color: #5a5a5a;
+    font-size: 0.95rem;
+  }
+  
+  /* Calendar Icon */
+  .edu-content i {
+    margin-right: 8px;
+    color: #888;
+  }
+  
+  .projects-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .project-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .tech-stack span {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    margin: 3px;
+    border-radius: 12px;
+  }
+
+  
+
+
+  .container {
+    max-width: 900px;
+    margin: 80px auto;
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    padding: 48px 24px 56px 24px;
+    text-align: center;
+  }
+  .contact-title{
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+    
+  }
+  .contact-subtitle{
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+  
+  .contact-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    padding: 28px 40px;
+    min-width: 260px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    transition: box-shadow 0.2s;
+  }
+  
+  .contact-card i {
+    font-size: 1.7rem;
+    color: #111;
+  }
+  
+  .contact-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  }
+
+ .contact-icon{
+  text-decoration: none;
+  color: black;
+ } 
+
+ .footer {
+  height: 180px;
+  background: #232323;
+  color: #fff;
+  padding: 36px 0 18px 0;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 18px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.12rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: #007BFF; /* Blue */
+    transform: translateX(5px); /* move slightly right */
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #444;
+  width: 80%;
+  margin: 0 auto 18px auto;
+}
+
+.footer-copy {
+  font-size: 1rem;
+  color: #d0d0d0;
+  margin-top: 65px;
+}
+
+
   
    

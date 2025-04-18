@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="style_prac.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.querySelector(".hamburger-menu");
@@ -21,6 +23,12 @@
           mobileNav.classList.toggle("active");
         });
       });
+      document.getElementById("viewResume").addEventListener("click", function(e) {
+    e.preventDefault(); // Prevent default behavior
+    window.open("resume.pdf", "_blank"); // Open resume in a new tab (make sure the path is correct)
+});
+
+
     </script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -31,7 +39,7 @@
       <div class="nav-container">
         <div class="logo">
           <img src="logo.png" alt="Logo" class="logo-img"> <!-- Use your logo image -->
-          <section id="home"><span class="portfolio-text"><a href="#home"></a>PRADIP MISHRA</span></section>
+          <section id="home"><span class="portfolio-text"><a href="#home"></a>PRADIP MISHRA</span></section>      
         </div>
 
           <!-- Hamburger icon (only visible on mobile) -->
@@ -45,6 +53,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
           <!-- <button class="theme-btn" id="theme-btn">Light Mode</button> -->
         </ul>
@@ -56,19 +65,20 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
      </div>
     </nav>
     
     <section class="hero-section">
-      <p>Hello, I'm</p>
+      <p class="hello">Hello, I'm</p>
       <h1>Pradip Mishra</h1>
       <h2>Software Developer</h2>
     
       <div class="buttons">
         <a href="resume.pdf" class="btn-outline" id="viewResume">View Resume</a>
-        <a href="resume.pdf" class="btn-filled" id="downloadResume">Download Resume</a>
+        <!-- <a href="resume.pdf" class="btn-filled" id="downloadResume">Download Resume</a> -->
       </div>
     
       <div class="social-icons">
@@ -76,978 +86,231 @@
         <a href="https://github.com/pradipmishr"><i class="fab fa-github"></i></a>
       </div>
     </section>
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <p class="about-subtitle">Get To Know More</p>
+        <h1 class="about-title">About Me</h1>
+        <p class="about-description">
+          Hey! I’m a full-stack developer who loves turning ideas into real,
+          working projects. I specialize in backend development with Spring Boot
+          and PostgreSQL, and I’m currently exploring React to level up my frontend game.
+          From task management tools to cloud file sharing systems, I enjoy building things that make life easier. Always learning, always coding.
+        </p>
+      </div>
+    </section>
+    <section class="skills-section" id="skills">
+      <div class="skills-header">
+        <p class="skills-subtitle">Explore My</p>
+        <h1 class="skills-title">Skills</h1>
+      </div>
     
-        
-
-
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <br>
-      <!-- <div class="section-container"> -->
-        <!-- <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div> -->
-        
-        <!-- <br><br> -->
-        
-        <div class="about-details-container">
-          <div class="text-container" style="align-items: center;">
-            <p >
-              As a python developer passion for programming and problem-solving, I am eager to leverage my skills in Python development to contribute to innovative projects.
-              With a solid foundation in Python programming gained through academic projects and self-study, I am equipped to tackle challenges and deliver high-quality solution
-              I have Showed my skills through the projects which i have made also used python to solve day to day problems
-
-            </p>
-             <p ></p>
-            <!-- <p style="font-size: 21px;">
-            </p> -->
+      <div class="skills-content">
+        <!-- Programming Languages -->
+        <div class="skills-group">
+          <h2>Programming Languages</h2>
+          <div class="skills-cards">
+            <div class="skill-card">
+              <img src="python.jpg" alt="Python">
+              <button>Python</button>
+            </div>
+            <div class="skill-card">
+              <img src="javascript.jpg" alt="JavaScript">
+              <button>JavaScript</button>
+            </div>
+            <div class="skill-card">
+              <img src="java.jpg" alt="Java">
+              <button>Java</button>
+            </div>
+            <div class="skill-card">
+              <img src="c.jpg" alt="C">
+              <button>C Programming</button>
+            </div>
+            <div class="skill-card">
+              <img src="html.jpg" alt="HTML">
+              <button>HTML</button>
+            </div>
+            <div class="skill-card">
+              <img src="css.jpg" alt="CSS">
+              <button>CSS</button>
+            </div>
           </div>
-
         </div>
-      <!-- </div> -->
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      /> -->
+        <div class="skills-group">
+          <h2>Frameworks</h2>
+          <div class="skills-cards">
+            <div class="skill-card">
+              <img src="springboot.jpg" alt="SpringBoot">
+              <button>Spring Boot</button>
+            </div>
+            <div class="skill-card">
+              <img src="hibernate.jpg" alt="Hibernate">
+              <button>Hibernate</button>
+            </div>
+            <div class="skill-card">
+              <img src="spsecurity.jpg" alt="Spring Security">
+              <button>Spring Security</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-group">
+          <h2>Developer Tools</h2>
+          <div class="skills-cards">
+            <div class="skill-card">
+              <img src="git.jpg" alt="Git">
+              <button>Git</button>
+            </div>
+            <div class="skill-card">
+              <img src="github.jpg" alt="Github">
+              <button>Github</button>
+            </div>
+            <div class="skill-card">
+              <img src="maven.jpg" alt="maven">
+              <button>Maven</button>
+            </div>
+            <div class="skill-card">
+              <img src="postman.jpg" alt="Postman">
+              <button>Postman</button>
+            </div>
+            <div class="skill-card">
+              <img src="docker.jpg" alt="Docker">
+              <button>Docker</button>
+            </div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h2>Databases</h2>
+          <div class="skills-cards">
+            <div class="skill-card">
+              <img src="mysql.jpg" alt="MySql">
+              <button>MySql</button>
+            </div>
+            <div class="skill-card">
+              <img src="postgresql.jpg" alt="PostgreSql">
+              <button>PostgreSql</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </section>
-    <section id="skills" >
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Programming Languages</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/pybl.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">Python</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/jsbl.png"
-                  alt="Experience icon"
-                  class="icon1"
-                  style="margin-top: 0.4rem;"
-                />
-                <div>
-                  <h3 class="s-text" id="stx" >JavaScript</h3>
-                </div>
-              </article>
-              <!-- <article>
-                <img
-                  src="./assets/javabl.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3 class="s-text">Java</h3>
-                </div>
-              </article> -->
-
-
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/djbl.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">Django</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/drf.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">DRF</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/frappe.png"
-                  alt="Experience icon"
-                  class="frappe-icon"
-                  style="margin-bottom: 0.7rem;"
-
-                />
-                <div>
-                  <h3 class="s-text">frappe</h3>
-                </div>
-              </article>
-              <!-- <article>
-                <img
-                  src="./assets/jinjabl.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3 class="s-text">Jinja</h3>
-                </div>
-              </article> -->
- 
-            </div>
+    
+    <!--  PROJECT SECTION -->
+    <section class="projects-section" id="projects">
+      <h2 class="section-title"> My Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3 class="project-title">College Management System</h3>
+          <p class="project-description">
+            A full-featured backend system to manage students, courses,
+             and staff using Spring Boot and MySQL.
+          </p>
+          <div class="tech-stack">
+            <span>Spring Boot</span>
+            <span>MySql</span>
+            <span>Spring Security</span>
           </div>
         </div>
-      </div>
-      
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/htmlbw.png"
-                  alt="Experience icon"
-                  class="icon3"
-
-                />
-                <div>
-                  <h3 class="s-text">HTML</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/cssbw.png"
-                  alt="Experience icon"
-                  class="icon1"
-                  style="margin-top: 0.4rem;"
-
-                />
-                <div>
-                  <h3 class="s-text">CSS</h3>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/tailwind-css.png"
-                  alt="Experience icon"
-                  class="large-icon"
-                  style="margin-top: 0.3rem;"
-
-                />
-                <div>
-                  <h3 class="s-text">TailwindCss</h3>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/atom.png"
-                  alt="Experience icon"
-                  class="maria-icon"
-                  style="margin-left: 0.3rem;margin-top: 0.8rem;"
-
-                />
-                <div>
-                  <h3 class="s-text">React js</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/jsbl.png"
-                  alt="Experience icon"
-                  class="icon3"
-                  
-                  
-                />
-                <div>
-                  <h3 class="s-text" >JavaScript</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/bootbl.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">Bootstrap</h3>
-                </div>
-              </article>
-
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">DBMS & RDBMS</h2>
-            <div class="article-container">
-              
-              <article>
-                <img
-                  src="./assets/postgrebl.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">PostgreSQL</h3>
-                </div>
-              </article>
-              <!-- <article>
-                <img
-                  src="./assets/mariadbbl.png"
-                  alt="Experience icon"
-                  class="icon1"
-                  style="margin-top: 0.5rem;"
-                />
-                <div>
-                  <h3 class="s-text">MariaDB</h3>
-                </div>
-              </article> -->
-              <!-- <article>
-                <img
-                  src="./assets/mariadbbl.png"
-                  alt="Experience icon"
-                  class="icon1"
-                />
-                <div>
-                  <h3 >MariaDB</h3>
-                </div>
-              </article> -->
-              <article>
-                <img
-                  src="./assets/MySQL-logo-6C88CC06F1-seeklogo.com.png"
-                  alt="Experience icon"
-                  class="maria-icon"
-                  style="margin-left: 0.5rem;margin-top: 0.5rem;margin-bottom: 0.36rem;"
-                />
-                <div>
-                  <h3 class="s-text">Mysql</h3>
-                </div>
-              </article>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Tool & Technologies</h2>
-            <div class="article-container">
-              <!-- <article>
-                <img
-                  src="./assets/linuxbl.png"
-                  alt="Experience icon"
-                  class="icon-large"
-                />
-                <div>
-                  <h3 class="s-text" >Linux</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/windows-temp.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">Windows</h3>
-                </div>
-              </article> -->
-
-              <article>
-                <img
-                  src="./assets/gitbl.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">GitHub</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/gitlabbl.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">GitLab</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/aws-logo.png"
-                  alt="Experience icon"
-                  class="maria-icon"
-                  style="margin-left: 0;margin-top: 1rem;"
-                />
-                <div>
-                  <h3 class="s-text">AWS</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/postmanbl.png"
-                  alt="Experience icon"
-                  class="icon3"
-                />
-                <div>
-                  <h3 class="s-text">Postman</h3>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      /> -->
-    </section>
-
-
-    <!-- Experience -->
-    <section class="experience-section" id="experience">
-      <div class="experience-header">
-        <h2>Professional Experience</h2>
-      </div>
-
-        <div class="experience-card">
-          <h3 class="job-title job-titleh3"> Techseria Pvt Ltd 
-            <div>
-            <p class="company-name">Python & React Developer</p>
-            <i class="fa fa-calendar"></i>
-            <span class="job-duration"> May 2024 - Present</span>
-            </div>
-            </h3>
-
-          &nbsp;
-          <ul class="job-description">
-            <li>As a Python Developer at Techseria since May 2024, I have significantly enhanced my skills in the Frappe
-              framework while working on the Singapore client project, Digo. I’ve developed functionalities such as Reports,
-              Print Formats,Filters and Workflows . Which reduced the manual workflow by 70%  and gained proficiency in User Management and API Integration. My
-              experience also includes Scheduling automated tasks, Form Customization, Notifications, Search and Filters,
-              and Data Import/Export, deepening my understanding of Frappe’s diverse capabilities in ERP systems.Also created portal pages using Html,Css and Js
-            </li>
-
-            <li><b>Azure Backup Module :</b>Engineered a Frappe app for automated site backups with configurable options (Azure credentials, backup type, retention period, scheduling). Supported manual triggers via button and automated schedules for reliability.
-            </li>
-            <li>
-              <b>Issue Resolution :</b> Resolved scheduler job failures, cron execution issues, PDF rendering bugs, and image rotation errors, ensuring system stability.
-            </li>
-            <li>
-              <b>Frontend (React + Frappe Integration) :</b> Built Doctype-specific pages and components in React, incorporating protected routes, customized Material UI components, and role-based navigation for accessibility. Designed interactive dashboards and data-driven UI elements to optimize ERP workflows.
-            </li>
-            <li>
-              <b>Django API Development:</b> Created RESTful APIs using Django and Django REST Framework to power mobile and client-side applications. Implemented user authentication, CRUD operations, and dynamic routing, integrating with PostgreSQL for efficient data handling and real-time updates.
-            </li>
-          </ul>
-          <!-- <h4 class="skills-title">Skills Acquired </h4>
-          <div class="skills-list">
-            <span>Python</span>
-            <span>Frappe(ErpNext)</span>
-            <span>JavaScript</span>
-            <span>Jinja Template Engine</span>
-            <span>HTML5</span>
-            <span>Postman</span>
-            <span>MariaDB</span>
-            <span>GitLab</span>
-          </div> -->
-        </div>
-
-        &nbsp;
-        <div class="experience-card">
-           <h3 class="job-title job-titleh3"> BrainyBeam Technologies Pvt. Ltd.
-            <div>
-            <p class="company-name">Python Developer  </p>
-            <i class="fa fa-calendar"></i>
-            <span class="job-duration">Aug 2023 - April 2024</span>
-            </div>
-            </h3>
-          <ul class="job-description">
-            <li>Led the development of a <b>Hotel Booking Web App</b> using Django, Python, HTML, CSS, JavaScript, and MySQL.</li>
-            <li>Integrated user authentication, order history, and Razorpay payment processing for secure transactions.</li>
-            <li>Designed RESTful APIs to manage dynamic booking data and ensure seamless functionality. Also deployed the project on <a class="github-link" href="https://github.com/AdityaK0/hotelbooking-website" target="_blank"><span>GitHub</span></a></li>
-            
-          </ul>
-          <!-- <h4 class="skills-title">Skills Acquired</h4>
-          <div class="skills-list">
-            <span>Python</span>
-            <span>Django</span>
-            <span>JavaScript</span>
+    
+        <div class="project-card">
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-description">
+            A personal portfolio to showcase skills and projects.
+          </p>
+          <div class="tech-stack">
             <span>HTML</span>
             <span>CSS</span>
-            <span>Bootstrap</span>
-            <span>DRF (Django REST Framework)</span>
-            <span>MySql</span>
-            <span>GitHub</span>
-            <span>Pandas python libraries</span>
-          </div> -->
+            <span>JavaScript</span>
+          </div>
         </div>
-        
-        <!-- Add more experience cards as needed -->
-    </section>
-         
     
-    <!-- projects -->
-    <section class="project-section" id="projects">
-     <div class="experience-header">
-      <h2>Projects</h2>
-    </div>
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-image-container">
-            <div>
-              <h4 class="image-title">Home page</h4>
-              <a href="./assets/note_home.png" target="_blank">
-                <img src="./assets/note_home.png" alt="Resource Center Project" class="project-image" />
-              </a>
-            </div>
-            
-            <div>
-              <h4 class="image-title">Toast Message</h4>
-              <div  style="display: flex;flex-direction: column;gap: 10px;overflow-x: auto;height: 150px;">
-                <a href="./assets/note_pinned.png" target="_blank">
-                  <img src="./assets/note_pinned.png" alt="Vercel Logs" class="project-image" style="height: 80px;width: 250px;padding: 10px;" />
-                </a>
-                <a href="./assets/note_unpinned.png" target="_blank">
-                  <img src="./assets/note_unpinned.png" alt="Vercel Logs" class="project-image" style="height: 80px;width: 250px;padding: 10px;" />
-                </a>
-                <a href="./assets/note_added.png" target="_blank">
-                  <img src="./assets/note_added.png" alt="Vercel Logs" class="project-image" style="height: 80px;width: 330px;padding: 10px;" />
-                </a>
-                <a href="./assets/note_updated.png" target="_blank">
-                  <img src="./assets/note_updated.png" alt="Vercel Logs" class="project-image" style="height: 80px;width: 330px;padding: 10px;" />
-                </a>
-                <a href="./assets/note_deleted.png" target="_blank">
-                  <img src="./assets/note_deleted.png" alt="Vercel Logs" class="project-image" style="height: 80px;width: 330px;padding: 8px;padding-left: 4px;" />
-                </a>
-
-              </div>
-
-
-
-            </div>
-            
-            <div>
-              <h4 class="image-title">Login page</h4>
-              <a href="./assets/note_login.png" target="_blank">
-                <img src="./assets/note_login.png" alt="AWS Buckets" class="project-image" />
-              </a>
-            </div>
-            <div>
-              <h4 class="image-title">Register page</h4>
-              <a href="./assets/note_register.png" target="_blank">
-                <img src="./assets/note_register.png" alt="AWS Buckets" class="project-image" />
-              </a>
-            </div>
-            
-            <div>
-              <h4 class="image-title">New Note Modal</h4>
-              <a href="./assets/note_addm.png" target="_blank">
-                <img src="./assets/note_addm.png" alt="Neon DB" class="project-image" />
-              </a>
-            </div>
-            <div>
-              <h4 class="image-title">Update Note Modal</h4>
-              <a href="./assets/note_updatem.png" target="_blank">
-                <img src="./assets/note_updatem.png" alt="Neon DB" class="project-image" />
-              </a>
-            </div>
-            <div>
-              <h4 class="image-title">User Profile</h4>
-              <a href="./assets/note_profile.png" target="_blank">
-                <img src="./assets/note_profile.png" alt="Neon DB" class="project-image" />
-              </a>
-            </div>
-          </div>
-          
-          <div class="project-title-container">
-            <h2 class="project-title">FullStackNoteApp</h2>
-            <div>
-              <span style="font-size: 13px;">
-                This is a full-stack note-taking application built using <b>Django (DRF)</b> for the backend and <b>ReactJS</b> for the frontend. It features secure user authentication with <b>JWT</b>, allowing users to register, login, and logout. The application enables seamless <b>CRUD</b> operations on notes, including creating, reading, updating, deleting, pinning, and unpinning. Additionally, it supports token management, <b>automatic token refresh</b>, and blacklist handling for enhanced security.
-
-              </span>
-              <span style="font-size: 13px;">
-               The backend is deployed on <b>AWS EC2</b> using <b>Gunicorn</b> and <b>Nginx</b> with <b>DuckDNS</b> for domain management and <b>Let's Encrypt SSL</b> for secure HTTPS access. The frontend is hosted on <b>Netlify</b> for fast and scalable deployment, while the database is managed on <b>NeonDB</b> for high availability and performance. 
-
-              </span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-footer">
-          <div class="project-content">
-            <div class="project-actions">
-              <a href="https://github.com/AdityaK0/Resource-Sharer-Platform" class="project-button" target="_blank">
-                <i class="fa-brands fa-github"></i><span style="text-decoration: none; font-size: small;">Git</span>
-              </a>
-              <a href="https://noteapphub.netlify.app/login/" class="project-button" target="_blank">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i><span style="text-decoration: none; font-size: small;">Live</span>
-              </a>
-              <a href="https://github.com/AdityaK0/FullStackNoteApp-Django-ReactJs/blob/main/README.md" class="project-button" target="_blank">
-                <i class="fa-solid fa-circle-info"></i><span style="font-size: small;">Details</span>
-              </a>
-            </div>
-          </div>
-          
+        <div class="project-card">
+          <h3 class="project-title">Collaborative Task Management System</h3>
+          <p class="project-description">
+            A real-time task manager with comments and WebSocket-powered
+             notifications for team collaboration.
+          </p>
           <div class="tech-stack">
-            <h2>TechStack Used</h2>
-            <div class="skills-list1">
-              <span>Python</span>
-              <span>Django Rest Framework</span>
-              <span>ReactJs</span>
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>TailwindCss</span>
-              <span>Sqlite3</span>
-              <!-- <span>NeonDB</span> -->
-              <span>GitHub</span>
-            </div>
+            <span>Spring Boot</span>
+            <span>PostgreSql</span>
+            <span>WebSocket</span>
+            <span>Spring Security</span>
           </div>
         </div>
       </div>
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-image-container">
-            <div>
-              <h4 class="image-title">Home Page</h4>
-              <a href="./assets/tweet_home.png" target="_blank">
-                <img src="./assets/tweet_home.png" alt="Thought Exchanger Home Page" class="project-image" />
-              </a>
-            </div>
-            
-            <div>
-              <h4 class="image-title">Profile Page</h4>
-              <a href="./assets/tweet_profile.png" target="_blank">
-                <img src="./assets/tweet_profile.png" alt="Profile Page" class="project-image" />
-              </a>
-            </div>
-            
-            <div>
-              <h4 class="image-title">Notification Page</h4>
-              <a href="./assets/tweet_notification.png" target="_blank">
-                <img src="./assets/tweet_notification.png" alt="Tweet Actions" class="project-image" />
-              </a>
-            </div>
-            
-            <div>
-              <h4 class="image-title">Login Page</h4>
-              <a href="./assets/tweet_login_page.png" target="_blank">
-                <img src="./assets/tweet_login_page.png" alt="Database Schema" class="project-image" />
-              </a>
-            </div>
-
-            <div>
-              <h4 class="image-title">Register Page</h4>
-              <a href="./assets/tweet_register_page.png" target="_blank">
-                <img src="./assets/tweet_register_page.png" alt="Database Schema" class="project-image" />
-              </a>
-            </div>
-          </div>
-          
-          <div class="project-title-container">
-            <h2 class="project-title">Thought Exchanger Tweet</h2>
-            <div>
-              <span style="font-size: 13px;">
-                Developed a <b>Django-based social media platform</b> that allows users to <b>create, like, comment, and save tweets</b>, fostering engagement through a <b>follow/unfollow system</b> and <b>real-time notifications</b> for activities like <b>new followers, unfollowing, and tweet interactions</b>.
-
-                Implemented a <b>secure authentication system</b> with <b>user registration, login, logout, and password reset</b>, along with <b>profile management</b>, enabling users to <b>update profiles, upload pictures, and manage tweets</b>. Integrated <b>media uploads</b> for tweets and profile pictures to ensure a <b>rich user experience</b>.
-                
-                Enhanced interactivity with a <b>modern UI</b>, <b>Bootstrap styling</b>, and <b>dynamic Toast Messages</b> for instant feedback on actions (e.g., <b>successful login, new comments, likes, or errors</b>).
-              </span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-footer">
-          <div class="project-content">
-            <div class="project-actions">
-              <a href="https://github.com/AdityaK0/Thought-Exchanger-Tweet" class="project-button" target="_blank">
-                <i class="fa-brands fa-github"></i><span style="text-decoration: none; font-size: small;">Git</span>
-              </a>
-              <!-- <a href="https://thought-exchanger.vercel.app/" class="project-button" target="_blank">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i><span style="text-decoration: none; font-size: small;">Live</span>
-              </a> -->
-              <a href="https://github.com/AdityaK0/Thought-Exchanger-Tweet/blob/main/README.md" class="project-button" target="_blank">
-                <i class="fa-solid fa-circle-info"></i><span style="font-size: small;">Details</span>
-              </a>
-            </div>
-          </div>
-          
-          <div class="tech-stack">
-            <h2>TechStack Used</h2>
-            <div class="skills-list1">
-              <span>Python</span>
-              <span>Django</span>
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Sqlite3</span>
-              <span>Jinja</span>
-              <!-- <span>Cloud Storage</span> -->
-              <span>GitHub</span>
-            </div>
-          </div>
-        </div>
-      </div>
-        <!-- Resource Center Project -->
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-image-container">
-                <div>
-                  <h4 class="image-title">Home page</h4>
-                  <a href="./assets/rcenter.png" target="_blank">
-                    <img src="./assets/rcenter.png" alt="Resource Center Project" class="project-image" />
-                  </a>
-                </div>
-                
-                <div>
-                  <h4 class="image-title">Vercel Backend Logs</h4>
-                  <a href="./assets/vercel_logs.png" target="_blank">
-                    <img src="./assets/vercel_logs.png" alt="Vercel Logs" class="project-image" />
-                  </a>
-                </div>
-                
-                <div>
-                  <h4 class="image-title">AWS Buckets</h4>
-                  <a href="./assets/aws.png" target="_blank">
-                    <img src="./assets/aws.png" alt="AWS Buckets" class="project-image" />
-                  </a>
-                </div>
-                
-                <div>
-                  <h4 class="image-title">Neon DB</h4>
-                  <a href="./assets/neon.png" target="_blank">
-                    <img src="./assets/neon.png" alt="Neon DB" class="project-image" />
-                  </a>
-                </div>
-              </div>
-              
-              <div class="project-title-container">
-                <h2 class="project-title">Resource Center</h2>
-                <div>
-                  <span style="font-size: 13px;">
-
-
-                    Developed a web-based resource-sharing platform to allow users to upload, manage, and download files securely.
-Implemented user authentication , cloud storage (AWS S3 Bucket)  for secure file management. and Postgresql Neon Database integration 
-                  </span>
-                </div>
-              </div>
-            </div>
-            
-            <div class="project-footer">
-              <div class="project-content">
-                <div class="project-actions">
-                  <a href="https://github.com/AdityaK0/Resource-Sharer-Platform" class="project-button" target="_blank">
-                    <i class="fa-brands fa-github"></i><span style="text-decoration: none; font-size: small;">Git</span>
-                  </a>
-                  <a href="https://resource-sharer-platform-zeta.vercel.app/" class="project-button" target="_blank">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i><span style="text-decoration: none; font-size: small;">Live</span>
-                  </a>
-                  <a href="https://github.com/AdityaK0/Resource-Sharer-Platform/blob/main/README.md" class="project-button" target="_blank">
-                    <i class="fa-solid fa-circle-info"></i><span style="font-size: small;">Details</span>
-                  </a>
-                </div>
-              </div>
-              
-              <div class="tech-stack">
-                <h2>TechStack Used</h2>
-                <div class="skills-list1">
-                  <span>Python</span>
-                  <span>Django</span>
-                  <span>AmazonS3 Bucket</span>
-                  <span>JavaScript</span>
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>Jinja</span>
-                  <span>Bootstrap</span>
-                  <span>PostgreSQL</span>
-                  <span>NeonDB</span>
-                  <span>GitHub</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-image-container">
-                <div>
-                  <h4 class="image-title">Home page</h4>
-                  <a href="./assets/jshome.png" target="_blank">
-                    <img src="./assets/jshome.png" alt="Resource Center Project" class="project-image" />
-                  </a>
-                </div>
-                
-                <div>
-                  <h4 class="image-title">WeatherNow </h4>
-                  <a href="./assets/weather.png" target="_blank">
-                    <img src="./assets/weather.png" alt="Vercel Logs" class="project-image" />
-                  </a>
-                </div>
-                
-                <div>
-                  <h4 class="image-title">Dynamic UserCards+</h4>
-                  <a href="./assets/fetchAPi.png" target="_blank">
-                    <img src="./assets/fetchAPi.png" alt="AWS Buckets" class="project-image" />
-                  </a>
-                </div>
-
-                <div>
-                  <h4 class="image-title">News WebApp</h4>
-                  <a href="./assets/newswebapp.png" target="_blank">
-                    <img src="./assets/newswebapp.png" alt="Vercel Logs" class="project-image" />
-                  </a>
-                </div>
-                
-                <div>
-                  <h4 class="image-title">TodoX</h4>
-                  <a href="./assets/todo.png" target="_blank">
-                    <img src="./assets/todo.png" alt="Neon DB" class="project-image" />
-                  </a>
-                </div>
-                <div>
-                  <h4 class="image-title">ImageCarousel .x. AutoCarousel</h4>
-                  <a href="./assets/crausal1.png" target="_blank">
-                    <img src="./assets/crausal1.png" alt="Neon DB" class="project-image" />
-                  </a>
-                </div>
-                <div>
-                  <h4 class="image-title">NumGuess Game </h4>
-                  <a href="./assets/guess.png" target="_blank">
-                    <img src="./assets/guess.png" alt="Neon DB" class="project-image" />
-                  </a>
-                </div>
-
-                <div>
-                  <h4 class="image-title">Clock .x. BgColor</h4>
-                  <a href="./assets/datecolor.png" target="_blank">
-                    <img src="./assets/datecolor.png" alt="Neon DB" class="project-image" />
-                  </a>
-                </div>
-
-                <div>
-                  <h4 class="image-title">Counter App</h4>
-                  <a href="./assets/count.png" target="_blank">
-                    <img src="./assets/count.png" alt="Neon DB" class="project-image" />
-                  </a>
-                </div>
-
-                <div>
-                  <h4 class="image-title">BgColor Changer</h4>
-                  <a href="./assets/colorchanger.png" target="_blank">
-                    <img src="./assets/colorchanger.png" alt="Neon DB" class="project-image" />
-                  </a>
-                </div>
-
-              </div>
-              
-              <div class="project-title-container">
-                <h2 class="project-title">JavaScript and DOM Projects                 </h2>
-                <div>
-                  <span style="font-size: 13px;">
-                    This is a <b>JavaScript-based</b> project where I showcase my <b>JavaScript</b> skills through various mini-projects. It includes features like <b>dynamic user cards</b>, a <b>news web app</b>, a <b>weather finder</b>, a <b>to-do list with local storage</b>, a <b>stopwatch</b>, an <b>image carousel</b>, and more.
-                    
-                  </span>
-                </div>
-              </div>
-            </div>
-            
-            <div class="project-footer">
-              <div class="project-content">
-                <div class="project-actions">
-                  <a href="https://github.com/AdityaK0/JavaScript-Projects/" class="project-button" target="_blank">
-                    <i class="fa-brands fa-github"></i><span style="text-decoration: none; font-size: small;">Git</span>
-                  </a>
-                  <a href="https://adityak0.github.io/JavaScript-Projects/" class="project-button" target="_blank">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i><span style="text-decoration: none; font-size: small;">Live</span>
-                  </a>
-                  <a href="https://github.com/AdityaK0/JavaScript-Projects/blob/main/README.md" class="project-button" target="_blank">
-                    <i class="fa-solid fa-circle-info"></i><span style="font-size: small;">Details</span>
-                  </a>
-                </div>
-              </div>
-              
-              <div class="tech-stack">
-                <h2>TechStack Used</h2>
-                <div class="skills-list1">
-                  <span>JavaScript</span>
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>DOM</span>
-                  <span>External Api's</span>
-                  <span>Web LocalStorage</span>
-                  <span>GitHub</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-image-container">
-                <div>
-                  <h4 class="image-title">Home page</h4>
-                  <a href="./assets/newp.png" target="_blank">
-                    <img src="./assets/newp.png" alt="News Portal Project" class="project-image" />
-                  </a>
-                </div>
-              </div>
-              
-              <div class="project-title-container">
-                <h2 class="project-title">News Portal</h2>
-                <div>
-                  <span style="font-size: 13px;">
-                    This project is a simple news app built with HTML, CSS, JavaScript, and a third-party news API. I created this website to learn JavaScript, specifically focusing on fetching data from an external API, handling errors, and dynamically displaying information on a webpage. The project helped me gain hands-on experience with modern JavaScript practices and client-server interactions.
-                  </span>
-                </div>
-              </div>
-            </div>
-            
-            <div class="project-footer">
-              <div class="project-content">
-                <div class="project-actions">
-                  <a href="https://github.com/AdityaK0/NewsWebsite-Using-API" class="project-button" target="_blank">
-                    <i class="fa-brands fa-github"></i><span style="text-decoration: none; font-size: small;">Git</span>
-                  </a>
-                  <a href="https://newswebapp-gilt.vercel.app" class="project-button" target="_blank">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i><span style="text-decoration: none; font-size: small;">Live</span>
-                  </a>
-                  <a href="https://github.com/AdityaK0/NewsWebsite-Using-API/blob/main/README.md" class="project-button" target="_blank">
-                    <i class="fa-solid fa-circle-info"></i><span style="font-size: small;">Details</span>
-                  </a>
-                </div>
-              </div>
-              
-              <div class="tech-stack">
-                <h2>TechStack Used</h2>
-                <div class="skills-list1">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                  <span>Vercel</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
     </section>
-    
-    
-
-    
-
-    <div id="education"  style="margin-bottom:3rem;">
-      <h1 class="titler" style="margin-bottom:3rem;">Education Journey <i class="fa fa-graduation-cap" ></i> </h1>
-        
-        <div class="education-timeline">
-          <div class="education-card" style="margin-top: 1.5rem;">
-            <div class="education-icon">🎓</div>
-            <div class="content">
-              <h2>Gujarat University</h2>
-              <h3>Bachelor of Computer Applications (BCA)</h3>
-              <p class="duration">2021 - 2024</p>
-            </div>
-          </div>
       
-          <div class="education-card">
-            <div class="education-icon">🏫</div>
-            <div class="content">
-              <h2>Raja Ram Vidhya Vihar</h2>
-              <h3>Higher Secondary School</h3>
-              <p class="duration">2019 - 2021</p>
-            </div>
+
+
+    <section class="education-section" id="education">
+      <h1 class="section-title">Education Journey 🎓</h1>
+      <div class="timeline">
+        
+        <!-- Card 1 -->
+        <div class="edu-card">
+          <div class="edu-icon">
+            <img src="graduate.png" alt="Graduation Cap" />
+          </div>
+          <div class="edu-content">
+            <h2>Tribhuvan University</h2>
+            <p>Bachelor of Information Management (BIM)</p>
+            <p><i class="fa-solid fa-calendar-days"></i> 2022 - 2026</p>
           </div>
         </div>
-      </div>
     
-    <section id="contact" >
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title" style="margin-bottom:2rem;">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <a href="mailto:examplemail@gmail.com" target="_blank">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-        </a>
-          <p><a href="mailto:examplemail@gmail.com" target="_blank">aditya123905@gmail.com</a></p>
+        <!-- Card 2 -->
+        <div class="edu-card">
+          <div class="edu-icon">
+            <img src="school.png" alt="School Icon" />
+          </div>
+          <div class="edu-content">
+            <h2>Peoples Campus</h2>
+            <p>Higher Secondary School</p>
+            <p><i class="fa-solid fa-calendar-days"></i> 2020 - 2022</p>
+          </div>
         </div>
-        <div class="contact-info-container">
-          <a href="https://www.linkedin.com/in/aditya-chaudhary-111379247/" target="_blank">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-        </a>
-          <p><a href="https://www.linkedin.com/in/aditya-chaudhary-111379247/" target="_blank">LinkedIn</a></p>
-        </div>
-        <div class="contact-info-container">
-          <a href="https://github.com/AdityaK0" target="_blank">
-          <img
-            src="./assets/github.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-        </a>
-          <p><a href="https://github.com/AdityaK0" target="_blank">Github</a></p>
-        </div>
-        <div class="contact-info-container wh">
-          <a href="https://wa.me/+919327748938" target="_blank">
-          <img
-            src="./assets/wh.webp"
-            alt="GitHub icon"
-            class="icon contact-icon em-icon"
-          />
-        </a>
-          <p style="margin-left:-0.85rem" ><a href="https://wa.me/+919327748938" target="_blank">WhatsApp</a></p>
-        </div>
+    
       </div>
     </section>
-    
-    <footer>
-      <div class="footer-content">
-        <div class="footer-nav">
-          <ul class="footer-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+     
 
-        <div class="footer-bottom">
-          <p>Copyright © 2024 Aditya Chaudhary. All Rights Reserved.</p>
+    <section id="contact">
+    <p class="contact-subtitle">Get In Touch</p>
+    <h1 class="contact-title">Contact Me</h1>
+    <div class="container">
+      <div class="contact-cards">
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <span>mishrapradip003@gmail.com</span>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-linkedin-in"></i>
+          <span><a href="https://www.linkedin.com/in/pradip-mishra-810081239/" class="contact-icon">LinkedIn</a></span>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-github"></i>
+          <span><a href="https://github.com/pradipmishr" class="contact-icon">Github</a></span>
+        </div>
+        <div class="contact-card">
+          <i class="fa-brands fa-facebook"></i>
+          <span><a href="https://www.facebook.com/pradip.mishra.56481" class="contact-icon">Facebook</a></span>
         </div>
       </div>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+  </section>
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <hr class="footer-divider">
+    <div class="footer-copy">
+      Copyright © 2025 Pradip Mishra. All Rights Reserved.
+    </div>
+  </footer>
+   
   </body>
 </html>
