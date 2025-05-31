@@ -145,7 +145,7 @@
     margin-bottom: 25px;
   }
   
-  .btn-outline {
+  .btn-outline{
     padding: 12px 25px;
     border: 2px solid black;
     background: none;
@@ -158,6 +158,8 @@
     color: white;
     background-color: #000;
   }
+
+
   
   .social-icons {
     display: flex;
