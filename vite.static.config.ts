@@ -6,7 +6,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfigPaths()],
   build: {
-    outDir: "dist",
+    outDir: "docs",
     rollupOptions: {
       input: "index.html",
     },
