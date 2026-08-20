@@ -116,6 +116,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  if (import.meta.env.VITE_STATIC_BUILD) {
+    return (
+      <>
+        <HeadContent />
+        {children}
+      </>
+    );
+  }
   return (
     <html lang="en">
       <head>

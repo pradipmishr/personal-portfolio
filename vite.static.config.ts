@@ -5,6 +5,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfigPaths()],
+  define: {
+    "import.meta.env.VITE_STATIC_BUILD": JSON.stringify(true),
+  },
   build: {
     outDir: "docs",
     rollupOptions: {
