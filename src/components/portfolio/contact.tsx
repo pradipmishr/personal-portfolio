@@ -1,10 +1,10 @@
 import { useState, type FormEvent } from "react";
 import { Github, Linkedin, Mail, MapPin, Loader2, Check, AlertCircle } from "lucide-react";
-import { useServerFn } from "@tanstack/react-start";
 import { SITE } from "@/data/site";
-import { sendContactMessage } from "@/lib/contact.functions";
 import { Section, SectionHeading } from "./section";
 import { Reveal } from "./reveal";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mppakbzo";
 
 type Status = "idle" | "loading" | "success" | "error";
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
@@ -17,7 +17,6 @@ const CHANNELS = [
 ];
 
 export function Contact() {
-  const send = useServerFn(sendContactMessage);
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
   const [serverError, setServerError] = useState("");
@@ -46,7 +45,16 @@ export function Contact() {
     setStatus("loading");
     setServerError("");
     try {
-      await send({ data: values });
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        }),
+      });
+      if (!response.ok) throw new Error("Failed to send message.");
       setStatus("success");
       form.reset();
     } catch (error) {
