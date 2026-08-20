@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, Github, Lock } from "lucide-react";
+import { Github } from "lucide-react";
 import { getProject } from "@/data/site";
 import { SiteNav } from "@/components/portfolio/site-nav";
 import { SiteFooter } from "@/components/portfolio/site-footer";
@@ -114,17 +114,12 @@ function DigitalWalletPage() {
       <main>
         <CaseStudyHeader project={project}>
           <a
-            href={project.demoUrl}
-            className="inline-flex items-center gap-2 rounded-lg border border-dashed border-border-strong px-4 py-2.5 text-sm text-muted-foreground"
+            href={project.githubUrl}
+            className="inline-flex items-center gap-2 rounded-lg border border-dashed border-border px-4 py-2.5 text-sm text-subtle"
           >
-            <ExternalLink className="size-4" aria-hidden />
-            View Demo
-            <span className="font-mono text-[0.6rem] text-subtle">placeholder</span>
+            <Github className="size-4" aria-hidden />
+            View on GitHub
           </a>
-          <span className="inline-flex items-center gap-2 rounded-lg border border-dashed border-border px-4 py-2.5 text-sm text-subtle">
-            <Lock className="size-4" aria-hidden />
-            GitHub — repository currently private
-          </span>
         </CaseStudyHeader>
 
         <div className="mx-auto w-full max-w-4xl px-5 pb-24 sm:px-8">
@@ -196,10 +191,13 @@ function DigitalWalletPage() {
 
           <CaseStudySection title="Project links">
             <div className="flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-2 rounded-lg border border-dashed border-border px-4 py-2.5 text-sm text-subtle">
+              <a
+                href={project.githubUrl}
+                className="inline-flex items-center gap-2 rounded-lg border border-dashed border-border px-4 py-2.5 text-sm text-subtle"
+              >
                 <Github className="size-4" aria-hidden />
-                Repository private — link to be added
-              </span>
+                GitHub Repository
+              </a>
             </div>
           </CaseStudySection>
 
