@@ -41,15 +41,18 @@ function ResumePage() {
       <SiteNav />
       <main className="px-5 pt-28 pb-24 sm:px-8 md:pt-36">
         <div className="mx-auto w-full max-w-4xl">
-          {/* Back link — mobile only */}
+          {/* Back link */}
           <Reveal>
             <Link
               to="/"
               hash="home"
-              className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground transition-colors hover:text-primary md:hidden"
+              className="group inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
             >
-              <ArrowLeft className="size-3.5" aria-hidden />
-              Home
+              <ArrowLeft
+                className="size-4 transition-transform group-hover:-translate-x-0.5"
+                aria-hidden
+              />
+              Back to Home
             </Link>
           </Reveal>
 
