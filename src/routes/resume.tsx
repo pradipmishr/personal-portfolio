@@ -48,11 +48,11 @@ function ResumePage() {
               hash="home"
               className="group inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
             >
+              Back to Home
               <ArrowLeft
                 className="size-4 transition-transform group-hover:-translate-x-0.5"
                 aria-hidden
               />
-              Back to Home
             </Link>
           </Reveal>
 
