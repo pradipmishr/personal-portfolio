@@ -15,10 +15,8 @@ export const SITE = {
   availability: "Open to Java / Spring Boot opportunities",
 } as const;
 
-/** TODO: replace once the Digital Wallet repository becomes public. */
-export const DIGITAL_WALLET_GITHUB_URL = "#digital-wallet-repo-placeholder";
-/** TODO: replace with the real deployment when one exists. */
-export const DIGITAL_WALLET_DEMO_URL = "#digital-wallet-demo-placeholder";
+export const DIGITAL_WALLET_GITHUB_URL =
+  "https://github.com/pradipmishr/DigitalWallet";
 export const ASSIGNMENT_MANAGEMENT_GITHUB_URL =
   "https://github.com/pradipmishr/Assignment-management";
 
@@ -149,8 +147,7 @@ export const PROJECTS: Project[] = [
       "Swagger / OpenAPI",
     ],
     githubUrl: DIGITAL_WALLET_GITHUB_URL,
-    githubAvailable: false,
-    demoUrl: DIGITAL_WALLET_DEMO_URL,
+    githubAvailable: true,
     demoAvailable: false,
     featured: true,
   },
